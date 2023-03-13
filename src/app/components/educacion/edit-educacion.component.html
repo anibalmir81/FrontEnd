@@ -1,0 +1,33 @@
+<div class="container" *ngIf="edu">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="intituto">Nombre de la institucion</label>
+                    <input type="text" class="form-control" id="instituto" name="instituto" [(ngModel)]="edu.instituto" required>
+                </div>
+                <div class="form-group">
+                    <label for="carrera">Titulo</label>
+                    <input type="text" class="form-control" id="carrera" name="carrera" [(ngModel)]="edu.carrera" required>
+                </div>
+                <div class="form-group">
+                    <label for="periodo">Periodo</label>
+                    <input type="text" class="form-control" id="periodo" name="periodo" [(ngModel)]="edu.periodo" required>
+                </div>
+                <div class="form-group">
+                    <label for="img_edu">Logo Institucion</label>
+                    <input type="file" class="form-control" id="img_edu" name="img_edu" [(ngModel)]="edu.img_edu" (change)="uploadImage($event)"
+                    accept=".jpg, .jpeg,.png">
+                </div>
+                <div class="imagen">
+                    <img [src]="imageService.url" width="200px">
+                </div>
+
+                <button class="btn btn-primary">
+                    Modificar educacion
+                </button>
+
+            </form>
+        </div>
+    </div>
+</div>

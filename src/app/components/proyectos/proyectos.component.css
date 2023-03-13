@@ -1,0 +1,24 @@
+.row {
+    padding-left: 20px;  
+    padding-right: 20px;  
+}
+.contenedor {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 576px) {
+    .contenedor {
+        flex-direction: row;
+    }
+
+}
+img {
+    box-shadow: 10px 10px 30px grey;
+}
+
+#imgPro{
+    width: 200px;
+}

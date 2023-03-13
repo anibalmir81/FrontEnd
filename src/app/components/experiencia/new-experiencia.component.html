@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="empresa">Empresa</label>
+                    <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="empresa" required>
+                </div>
+                <div class="form-group">
+                    <label for="puesto">Titulo del Puesto</label>
+                    <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="puesto" required>
+                </div>
+                <div class="form-group">
+                    <label for="actividad">Actividades</label>
+                    <input type="text" class="form-control" id="actividad" name="actividad" [(ngModel)]="actividad" required>
+                </div>
+                <div class="form-group">
+                    <label for="periodo_exp">Periodo</label>
+                    <input type="text" class="form-control" id="periodo_exp" name="periodo_exp" [(ngModel)]="periodo_exp" required>
+                </div>
+                <div class="form-group">
+                    <label for="img_exp">Logo Empresa</label>
+                    <input type="file" class="form-control" id="img_exp" name="img_exp" [(ngModel)]="img_exp" (change)="uploadImage($event)"
+                    accept=".jpg, .jpeg,.png">
+                </div>
+                <div class="imagen">
+                    <img src="imageService.url" width="200px">
+                </div>
+                <button class="btn btn-primary">
+                    Agregar experiencia
+                </button>
+
+            </form>
+        </div>
+    </div>
+</div>

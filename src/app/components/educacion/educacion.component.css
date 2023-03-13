@@ -1,0 +1,16 @@
+.row {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h3, h4 {
+    display: inline;
+}
+
+ul {
+    list-style: none;
+}
+
+#imgEdu{
+    width: 200px;
+}
