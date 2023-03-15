@@ -9,6 +9,6 @@ export const environment = {
     messagingSenderId: '556916157999',
   },
   production: true,
-  URL:'https://heroku-backend.com/'
+  URL:'https://springboot-asm.onrender.com/'
 
 };
